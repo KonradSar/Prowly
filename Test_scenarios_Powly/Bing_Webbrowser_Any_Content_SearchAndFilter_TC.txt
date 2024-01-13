@@ -1,32 +1,34 @@
 Feature: Funkcjonalność - wyszukiwanie frazy "Prowly Media Monitoring" na stronie bing.com z filtrowaniem według dowolnej kategorii (obrazy, wideo oraz wiadomości)
 
-Scenario: Jako niezalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring"
+Scenario: Jako niezalogowany/zalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring"
 
-Given Jako niezalogowany użytkownik jestem na widoku głównym strony bing.com
+Given Jako niezalogowany/zalogowany użytkownik jestem na widoku głównym strony bing.com
 When Wpisuję w polu z ikoną lupy oraz hint'em "Wyszukaj w Internecie" frazę "Prowly Media Monitoring" 
 And Nie mam zaznacznych żadnych filtrów wyszukiwania
 And Klikam w przycisk Enter na fizycznej klawiaturze
-Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajduje się min. prowly.com. oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring"
+Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajduje się min. prowly.com. oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring".
 
-Scenario: Jako niezalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" oraz otrzymać TYLKO wyniki dla obrazów
+Scenario: Jako niezalogowany/zalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" oraz otrzymać TYLKO wyniki dla obrazów
 
-Given Jako niezalogowany użytkownik jestem na widoku głównym strony bing.com
+Given Jako niezalogowany/zalogowany użytkownik jestem na widoku głównym strony bing.com
 When Klikam przycisk "Obrazy" w górnej części strony głównej wyszukiwarki bing.com
 And Wpisuję w polu wyszukiwania zlokalizowanym w górnej, lewej części ekranu frazę "Prowly Media Monitoring"
 And Klikam w przycisk Enter na fizycznej klawiaturze
-Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajdują się obrazy powiązane z wyszukiwaną frazą oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring"
+Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajdują się obrazy powiązane z wyszukiwaną frazą oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring".
 
-Scenario: Jako niezalogowany użytkownik chcę wyszukać za pomocą klawiatury ekranowej wyniki dla frazy "Prowly Media Monitoring"
+Scenario: Jako niezalogowany/zalogowany użytkownik chcę wyszukać za pomocą klawiatury ekranowej wyniki dla frazy "Prowly Media Monitoring"
 
-Given Jako niezalogowany użytkownik jestem na widoku głównym strony bing.com
+Given Jako niezalogowany/zalogowany użytkownik jestem na widoku głównym strony bing.com
 When Klikam w przycisk ikony klawiatury o nazwie "Wyszukaj przy pomocy klawiatury ekranowej" zlokalizowany po prawej stronie pola wyszukiwania
 And Wpisuje wyszukiwaną frazę "Prowly Media Monitoring" i klikam przycisk Enter znajdujący się na klawiaturze ekranowej
-Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajduje się min. prowly.com. oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring"
+Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajduje się min. prowly.com. oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring".
 
-Scenario: Jako niezalogowany użytkownik chcę wyszukać głosowo wyniki dla frazy "Prowly Media Monitoring"
+Scenario: Jako niezalogowany/zalogowany użytkownik chcę wyszukać głosowo wyniki dla frazy "Prowly Media Monitoring"
 
 Given Jako niezalogowany użytkownik jestem na widoku głównym strony bing.com
 When Klikam w przycisk ikony mikrofonu o nazwie "Wyszukaj głosowo" zlokalizowany po prawej stronie pola wyszukiwania
+And Przyznaję aplikacji uprawnienia do mikrofonu
+And Pojawia się okno z napisem nasłuchiwanie
 And Wypowiadam głośno i wyraźnie wyszukiwaną frazę "Prowly Media Monitoring" czekam aż na ekranie pojawi się wypowiedziana przeze mnie fraza, którą wyszukiwarka zaraz zacznie szukać
-Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajduje się min. prowly.com. oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring"
+Then Wyśiwtlona jest strona internetowa z wynikami zgodnymi z wyszukiwaną frazą. W wynikach wyszukiwania znajduje się min. prowly.com. oraz w polu wyszukiwania istnieje wyszukiwana fraza "Prowly Media Monitoring".
 
