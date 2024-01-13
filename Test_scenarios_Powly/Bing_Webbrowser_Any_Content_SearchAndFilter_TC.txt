@@ -1,0 +1,2 @@
+Wyszukiwanie za pomocą wpisania tekstu z klawiatury fizycznej, klawiatury wirtualnej, głosowo
+Filtrowanie wyników wyszukiwania za pomocą filtrów all, images, video, news
