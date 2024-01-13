@@ -1,33 +1,16 @@
 Feature: Funkcjonalność - wykorzystanie copilot'a AI do wyszukiwania frazy "Prowly Media Monitoring" na stronie bing.com
 
-Scenario: Jako niezalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" za pomocą fizycznej klawiatury
+Scenario: Jako niezalogowany/zalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" za pomocą fizycznej klawiatury
 
-Given Jako niezalogowany użytkownik jestem na widoku głównym strony bing.com
+Given Jako niezalogowany/zalogowany użytkownik jestem na widoku głównym strony bing.com
 When Klikam przycisk "Czat" w lewej, górnej części strony głównej wyszukiwarki bing.com 
 And Wpisuję w otwarte okno czatu wyszukiwaną frazę "Prowly Media Monitoring"
 And Klikam w przycisk Enter na fizycznej klawiaturze
 Then Wyśiwtlona jest odpowiedź w widoku czatu ze strony AI i użytkownik może kontunuować czat i zadawać kolejne pytania.
 
-Scenario: Jako niezalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" za pomocą mikrofonu
+Scenario: Jako niezalogowany/zalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" za pomocą mikrofonu
 
-Given Jako niezalogowany użytkownik jestem na widoku głównym strony bing.com
-When Klikam przycisk "Czat" w lewej, górnej części strony głównej wyszukiwarki bing.com 
-And Klikam w otwartym oknie czatu ikonę mikrofonu o nazwie "Użyj mikrofonu"
-And Przyznaję uprawnienia aplikacji do mikrofonu
-And Kiedy w polu wyszukiwania czatu pojawia się fraza:"Słucham" wypowiadam głośno i wyraźnie wyszukiwaną frazę "Prowly Media Monitoring"
-Then Wyśiwtlona jest odpowiedź na zadane pytanie lub wypowiedzaną frazę w widoku czatu ze strony AI a użytkownik może zadawać kolejne pytania.
-
-Scenario: Jako zalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" za pomocą fizycznej klawiatury
-
-Given Jako zalogowany użytkownik jestem na widoku głównym strony bing.com
-When Klikam przycisk "Czat" w lewej, górnej części strony głównej wyszukiwarki bing.com 
-And Wpisuję w otwarte okno czatu wyszukiwaną frazę "Prowly Media Monitoring"
-And Klikam w przycisk Enter na fizycznej klawiaturze
-Then Wyśiwtlona jest odpowiedź w widoku czatu ze strony AI i użytkownik może kontunuować czat i zadawać kolejne pytania.
-
-Scenario: Jako zalogowany użytkownik chcę wyszukać wyniki dla frazy "Prowly Media Monitoring" za pomocą mikrofonu
-
-Given Jako zalogowany użytkownik jestem na widoku głównym strony bing.com
+Given Jako niezalogowany/zalogowany użytkownik jestem na widoku głównym strony bing.com
 When Klikam przycisk "Czat" w lewej, górnej części strony głównej wyszukiwarki bing.com 
 And Klikam w otwartym oknie czatu ikonę mikrofonu o nazwie "Użyj mikrofonu"
 And Przyznaję uprawnienia aplikacji do mikrofonu
