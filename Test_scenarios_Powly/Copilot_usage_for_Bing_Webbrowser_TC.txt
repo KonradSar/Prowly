@@ -16,3 +16,11 @@ And Klikam w otwartym oknie czatu ikonę mikrofonu o nazwie "Użyj mikrofonu"
 And Przyznaję uprawnienia aplikacji do mikrofonu
 And Kiedy w polu wyszukiwania czatu pojawia się fraza:"Słucham" wypowiadam głośno i wyraźnie wyszukiwaną frazę "Prowly Media Monitoring"
 Then Wyśiwtlona jest odpowiedź na zadane pytanie lub wypowiedzaną frazę w widoku czatu ze strony AI a użytkownik może zadawać kolejne pytania.
+
+Scenario: Jako niezalogowany/zalogowany użytkownik chcę zmienić styl konwersacji z czat AI
+
+Given Jako niezalogowany/zalogowany użytkownik jestem na widoku głównym strony bing.com
+When Klikam przycisk "Czat" w lewej, górnej części strony głównej wyszukiwarki bing.com 
+And Ponad widokiem czatu widze okno do wyboru stylu konwersacji
+And Wybieram dowolny styl konwersacji
+Then Kolor labelki "Nowy temat" zmienia się w zależności od wybranej opcji stylu konwersacji a uytkownik może rozpocząć konwersację.
